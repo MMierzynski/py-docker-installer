@@ -1,0 +1,29 @@
+project:
+    repository: https://github.com/MMierzynski/docker-lamp
+    root_dir: /home/mateusz/Projects/PHP/Symfony/kurs
+    www_dir: www
+    compose_file: docker-compose.yml
+    branch: master
+    build: true
+    force: false
+    env:
+        - DB_NAME: kurs_db
+        - DB_USER: user
+        - DB_PASSWORD: password
+        - DB_ROOT_PASSWORD: 123qaz456
+        - PHP_OWNER: 1000:1000
+        - PORT_APACHE_HTTP: 8000
+        - PORT_ADMINER: 8080
+        - NETWORK_SUBNET: 192.168.20.1/28
+        - IP_PHP: 192.168.20.2
+        - IP_DB: 192.168.20.3
+        - IP_APACHE: 192.168.20.4
+        - IP_ADMINER: 192.168.20.5
+        - CONTAINER_NAME_PHP: lamp_kurs_php
+        - CONTAINER_NAME_APACHE: lamp_kurs_apache
+        - CONTAINER_NAME_ADMINER: lamp_kurs_adminer
+        - CONTAINER_NAME_DB: lamp_kurs_db
+    files:
+        apache_config:
+            source: /home/mateusz/Projects/Python/python_installer/demo.apache.conf
+            target: /home/mateusz/Projects/PHP/Symfony/kurs/docker/apache/demo.apache.conf

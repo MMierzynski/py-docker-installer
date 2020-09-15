@@ -1,0 +1,15 @@
+project:
+    repository: git@bitbucket.org:kirainformatikteam/lamp-docker.git
+    root_dir: /home/mateusz/test/kiratik/lamp
+    www_dir: html
+    compose_file: docker-compose.dev.yml
+    build: true
+    force: true
+    env:
+        - LAMP_VERSION: php-7.4.3
+        - APACHE_PORT: 8080
+        - MYSQL_PORT: 33060
+        - MYSQL_USER: test_db_user
+        - MYSQL_PASSWORD: qwe123qwe
+        - MYSQL_DATABASE: test_db
+        - MYSQL_ROOT_PASSWORD: root
