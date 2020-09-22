@@ -13,6 +13,11 @@ parser.add_argument('-c', '--config',  type=str, help='Absolute path to config f
 if __name__ == '__main__':
     args = parser.parse_args()
 
+    if args.config is None:
+        print("ERROR: Missing path to config file.")
+        sys.exit(1)
+
+
     config = ProjectConfig(args.config)
     config.parse()
 
