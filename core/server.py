@@ -1,5 +1,5 @@
 import os
-from core.project_config import ProjectConfig
+from .project_config import ProjectConfig
 
 class Server(object):
 

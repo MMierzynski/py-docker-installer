@@ -1,6 +1,6 @@
 import os
 import shutil
-from core.project_config import ProjectConfig
+from .project_config import ProjectConfig
 
 class Project(object):
     def __init__(self, project_config):
